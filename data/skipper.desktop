@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Skipper media player
+GenericName=Media player
+Comment=Play audio/video files
+Exec=skipper %U
+TryExec=skipper
+Icon=skipper
+Categories=AudioVideo;Player;
+StartupNotify=false
+Terminal=false
