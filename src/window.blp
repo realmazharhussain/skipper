@@ -1,0 +1,16 @@
+using Gtk 4.0;
+using Adw 1;
+
+template SkipperWindow: Adw.ApplicationWindow {  
+  Box {
+    orientation: vertical;
+  
+    .SkipperHeaderBar {}
+    .SkipperMyLabel {}
+    Box {
+      orientation: horizontal;
+      
+      Label { label: "True"; }
+    }
+  }
+}
