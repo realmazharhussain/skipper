@@ -17,7 +17,6 @@ resources = gnome.compile_resources('skipper-ui', gresource_xml,
 sources = files('main.c',
                 'app.c',
                 'window.c',
-                'mylabel.c',
                 'headerbar.c',
                 )
 
