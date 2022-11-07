@@ -1,6 +1,7 @@
 #include <adwaita.h>
 #include "app.h"
 #include "window.h"
+#include "headerbar.h"
 #include "macros.h"
 
 struct _SkipperWindow {
@@ -21,6 +22,7 @@ static void skipper_window_class_init (SkipperWindowClass *klass) {
 }
 
 static void skipper_window_init (SkipperWindow *self) {
+  g_type_ensure (SKIPPER_TYPE_HEADER_BAR);
   gtk_widget_init_template (GTK_WIDGET (self));
 }
 
