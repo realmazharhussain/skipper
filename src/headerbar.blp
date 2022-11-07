@@ -7,7 +7,13 @@ template SkipperHeaderBar: Adw.Bin {
   
     [start] WindowControls window_controls_start { side: start; }
     [start] Separator { visible: bind window_controls_start.visible; }
-    [start] MenuButton { icon-name: 'open-menu'; menu-model: app_menu; }
+
+    [start] MenuButton {
+      icon-name: 'open-menu';
+      menu-model: app_menu;
+      styles ['circular']
+    }
+
     [center] Label { styles ['title'] }
     [end] WindowControls { side: end; }
   }
