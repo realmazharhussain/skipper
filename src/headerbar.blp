@@ -2,20 +2,23 @@ using Gtk 4.0;
 using Adw 1;
 
 template SkipperHeaderBar: Adw.Bin {
-  CenterBox {
-    orientation: horizontal;
+  WindowHandle {
+    CenterBox {
+      orientation: horizontal;
   
-    [start] WindowControls window_controls_start { side: start; }
-    [start] Separator { visible: bind window_controls_start.visible; }
+      [start] Box {
+        WindowControls window_controls_start { side: start; }
+        Separator { visible: bind window_controls_start.empty inverted; margin-end: 5;}
+        MenuButton {
+          icon-name: 'open-menu';
+          menu-model: app_menu;
+          styles ['circular']
+        }
+      }
 
-    [start] MenuButton {
-      icon-name: 'open-menu';
-      menu-model: app_menu;
-      styles ['circular']
+      [center] Label { styles ['title'] }
+      [end] WindowControls { side: end; }
     }
-
-    [center] Label { styles ['title'] }
-    [end] WindowControls { side: end; }
   }
 }
 
