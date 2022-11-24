@@ -18,6 +18,7 @@ sources = files('main.c',
                 'app.c',
                 'window.c',
                 'headerbar.c',
+                'aboutwindow.c',
                 )
 
 executable(meson.project_name(), sources, resources,
