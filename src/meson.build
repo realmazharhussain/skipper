@@ -14,13 +14,14 @@ resources = gnome.compile_resources('skipper-ui', gresource_xml,
   dependencies: blueprints,
 )
 
-sources = files('main.c',
-                'app.c',
-                'window.c',
-                'headerbar.c',
-                'aboutwindow.c',
-                )
+sources = files(
+  'main.gs',
+  'app.gs',
+  'window.gs',
+  'about.gs',
+) + resources
 
-executable(meson.project_name(), sources, resources,
-           dependencies : adw_dep,
+executable(meson.project_name(), sources,
+           dependencies: [adw_dep, gst_dep],
+           vala_args: ['--gresourcesdir', meson.current_build_dir()],
            install: true)

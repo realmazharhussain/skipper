@@ -1,8 +1,9 @@
-project('skipper', 'c',
+project('skipper', 'vala', 'c',
         version: '0.1.alpha')
 
 gnome = import('gnome')
 adw_dep = dependency('libadwaita-1')
+gst_dep = dependency('gstreamer-1.0')
 
 subdir('src')
 
